@@ -1,0 +1,81 @@
+/* 1. Container Chính */
+.contact-bubble {
+    /* Cố định vị trí ở góc dưới bên phải màn hình */
+    position: fixed;
+    bottom: 20px; /* Cách đáy 20px */
+    right: 20px;  /* Cách lề phải 20px */
+    z-index: 1000; /* Đảm bảo nó luôn nằm trên các nội dung khác */
+    cursor: pointer;
+}
+
+/* 2. Biểu tượng Chính (Nút bấm) */
+.main-icon {
+    /* Tạo hình tròn cho nút chính */
+    width: 60px;
+    height: 60px;
+    background-color: #39423d; /* Màu xanh lá nổi bật (ví dụ) */
+    color: white;
+    border-radius: 50%;
+    
+    /* Căn giữa biểu tượng bên trong */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease; /* Thêm hiệu ứng chuyển động mượt mà */
+}
+
+.main-icon:hover {
+    background-color: #128c7e; /* Đổi màu khi di chuột */
+}
+
+/* 3. Container chứa các liên kết mạng xã hội */
+.social-links {
+    /* Ẩn ban đầu */
+    opacity: 0;
+    visibility: hidden;
+    
+    /* Thiết lập vị trí hiển thị */
+    position: absolute;
+    bottom: 70px; /* Đặt phía trên nút chính */
+    right: 0;
+    
+    /* Xếp chồng các bong bóng con theo chiều dọc (cột) */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Căn phải các nút con */
+    
+    /* Thêm hiệu ứng chuyển động */
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    transform: translateY(10px); /* Kéo xuống 1 chút khi ẩn */
+}
+
+/* 4. Định dạng chung cho các nút con */
+.social-links a {
+    text-decoration: none;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px; /* Khoảng cách giữa các nút con */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    font-size: 0; /* Ẩn chữ Zalo/Messenger/Facebook nếu bạn dùng biểu tượng */
+    overflow: hidden;
+}
+
+/* 4.1. Màu sắc riêng */
+.facebook-icon { background-color: #3b5998; }
+.messenger-icon { background-color: #0084ff; }
+.zalo-icon { background-color: #0068ff; }
+
+/* 5. Hiển thị khi được kích hoạt (Sẽ dùng JavaScript để thêm lớp này) */
+.contact-bubble.active .social-links {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0); /* Đưa về vị trí ban đầu (hiển thị) */
+}

@@ -1,0 +1,41 @@
+[
+  {
+    "id": "PBRX01",
+    "name": "Acc Max Rebirths - Full Set Plant/Brainrot Thần Thoại",
+    "account_id": "PBR-MAX1",
+    "username": "PBRLegendary",
+    "password": "SecurePassword123!",
+    "price": 180000,
+    "currency": "VND",
+    "image": "/anh/max_plant.jpg",
+    "description": "Tài khoản **10+ Rebirths**. Sở hữu **Full Set Plants Mythical (Godly)** và **Brainrots S-Tier** (ví dụ: Garamararama) cho thu nhập **200.000$/giây**. Có nhiều **Fuse Brainrots** hiếm và các **Gear (súng)** mạnh nhất.",
+    "link": "/acc/pbr01_details.html",
+    "tags": ["Max Rebirth", "Godly Plants", "200K $/s Income"]
+  },
+  {
+    "id": "PBRY02",
+    "name": "Acc Trung Cấp - Farm Tiền Hiệu Quả",
+    "account_id": "PBR-MID2",
+    "username": "BrainrotFarmer",
+    "password": "PBRFarmerPass",
+    "price": 55000,
+    "currency": "VND",
+    "image": "/anh/mid_plant.jpg",
+    "description": "Tài khoản **5 Rebirths**. Sở hữu các **Plants Epic/Legendary** với đột biến (Mutations) tốt. Bộ **Brainrots A-Tier** cho thu nhập ổn định **50.000$/giây**. Đã mở khóa **Fuse Machine** và nhiều ô đất trồng (slots).",
+    "link": "/acc/pbr02_details.html",
+    "tags": ["5 Rebirths", "Fuse Machine Unlock", "50K $/s Income"]
+  },
+  {
+    "id": "PBRZ03",
+    "name": "Acc Khởi Đầu Tốt - Có Brainrot Legend",
+    "account_id": "PBR-NEW3",
+    "username": "NewbieStarter",
+    "password": "ProSale!Pass456",
+    "price": 20000,
+    "currency": "VND",
+    "image": "/anh/new_plant.jpg",
+    "description": "Tài khoản **1 Rebirth**. Có **1-2 Brainrots Legendary** để bắt đầu tạo thu nhập. Cấp độ đầu game (Sea 1), phù hợp cho người mới muốn có lợi thế ban đầu mà không cần cày cuốc.",
+    "link": "/acc/pbr03_details.html",
+    "tags": ["1 Rebirth", "Legendary Brainrot", "Cheap Starter"]
+  }
+]

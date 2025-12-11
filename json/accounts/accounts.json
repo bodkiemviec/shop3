@@ -1,0 +1,41 @@
+[
+  {
+    "id": "A001",
+    "name": "Tài Khoản Alpha Game Cao Cấp",
+    "account_id": "ACC001",
+    "username": "UserAlpha42",
+    "password": "SecurePassword123!",
+    "price": 50000,
+    "currency": "VND",
+    "image": "/anh/50k.jpg",
+    "description": "Tài khoản game cấp độ 60, có 150 vật phẩm quý hiếm, hoạt động trên máy chủ SEA-01. Đây là một tài khoản khởi đầu tốt với nhiều tài nguyên sẵn có.",
+    "link": "/acc/a001_details.html",
+    "tags": ["queen bee","Grow a garden","saygex"]
+  },
+  {
+    "id": "A002",
+    "name": "Beta Gamer Huyền Thoại Cấp 99",
+    "account_id": "ACC002",
+    "username": "BetaGamer789",
+    "password": "GamerPass@789",
+    "price": 5000,
+    "currency": "VND",
+    "image": "/anh/5k.jpg",
+    "description": "Tài khoản max cấp độ 99, sở hữu 300 vật phẩm độc quyền và danh hiệu 'Legendary Hunter'. Hoạt động trên máy chủ EU-05. Đã đầu tư hơn 5 triệu VND.",
+    "link": "/acc/a002_details.html",
+    "tags": ["Grow a garden"] 
+  },
+  {
+    "id": "A003",
+    "name": "Web Seller Pro Acc Cơ Bản",
+    "account_id": "ACC003",
+    "username": "WebSellerPro",
+    "password": "ProSale!Pass456",
+    "price": 30000,
+    "currency": "VND",
+    "image": "/anh/acc 5k 1.1",
+    "description": "Tài khoản cấp độ 45, phù hợp cho người mới bắt đầu. Có 80 vật phẩm cơ bản. Hiện đang ở máy chủ NA-02.",
+    "link": "/acc/a003_details.html",
+    "tags": ["newbie", "giá cực rẻ", "Grow a garden"]
+  }
+]

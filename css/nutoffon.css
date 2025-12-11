@@ -1,0 +1,50 @@
+/* --- CSS: ĐIỀU CHỈNH VỊ TRÍ NÚT SWITCH --- */
+
+/* 1. Thiết lập cho Wrapper để nút cố định */
+.theme-switch-wrapper {
+    /* Đảm bảo nút luôn hiển thị trên các nội dung khác */
+    z-index: 9999; 
+    
+    /* Vị trí cố định (fixed) trên màn hình */
+    position: fixed; 
+    
+    /* Cố định ở góc trên bên phải */
+    top: 60px;       
+    right: 20px;     
+    
+    /* Kiểu dáng nhỏ gọn hơn */
+    padding: 10px 15px; 
+    border-radius: 10px;
+    
+    /* Nền mờ cho nút */
+    background-color: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    
+    /* Canh chỉnh nội dung bên trong */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+    /* Transition cho Dark Mode */
+    transition: background-color 0.4s, border-color 0.4s, box-shadow 0.4s;
+}
+
+/* 2. Điều chỉnh giao diện Dark Mode cho Wrapper */
+.dark-mode .theme-switch-wrapper {
+    background-color: rgba(0, 0, 0, 0.4); 
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* 3. Ẩn văn bản "Chế độ Sáng/Tối" để gọn hơn */
+.theme-switch-wrapper em {
+    font-size: 0.9em;
+    font-style: normal;
+    font-weight: 500;
+    color: var(--text-color); /* Sử dụng biến để chuyển màu theo theme */
+}
+
+/* Các style khác cho nút chuyển đổi (Switch) giữ nguyên từ lần trước... */
+/* ... (theme-switch, input, slider, slider:before) */

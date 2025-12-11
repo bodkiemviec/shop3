@@ -1,0 +1,99 @@
+:root {
+    --primary-color: #7b1fa2; /* Deep Violet / Tím đậm */
+    --accent-color: #00bcd4; /* Cyan / Xanh ngọc làm điểm nhấn */
+    --shadow-color: rgba(0, 0, 0, 0.08);
+}
+/* --- STYLE CHO TAG GỢI Ý --- */
+.tag-suggestion {
+    /* Đảm bảo nền sáng, tinh tế */
+    background-color: #ffffff; 
+    padding: 0.5rem 1rem;
+    margin-bottom: 2px;
+    cursor: pointer;
+    border-radius: 8px; /* Bo góc nhẹ */
+    font-size: 0.95rem;
+    color: #555555;
+    transition: background-color 0.2s, color 0.2s, transform 0.2s;
+    border: 1px solid #f0f0f0; /* Viền mỏng */
+}
+
+.tag-suggestion:hover {
+    /* Nổi bật khi hover bằng màu Tím chủ đạo */
+    background-color: var(--primary-color); 
+    color: #ffffff;
+    /* Hiệu ứng nhún nhẹ */
+    transform: translateX(5px); 
+    /* Bóng đổ nhẹ */
+    box-shadow: 0 2px 8px rgba(123, 31, 162, 0.2);
+    border-color: var(--primary-color);
+}
+
+/* Kiểu chữ mờ cho trường hợp không tìm thấy tag */
+.text-muted {
+    font-style: italic;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+}
+/* --- STYLE CHO TAG ĐÃ CHỌN (CHIP/PILL) --- */
+#selectedTagsBox {
+    /* Đảm bảo các chip tag không bị dính vào nhau */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px; /* Khoảng cách giữa các tag */
+}
+
+.selected-tag {
+    /* Hình dạng chip/pill */
+    display: inline-flex;
+    align-items: center;
+    padding: 0.4rem 1rem;
+    border-radius: 20px; /* Bo góc hoàn toàn */
+    font-weight: 600;
+    cursor: pointer;
+    
+    /* Gradient Tím-Xanh, giống Button */
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    color: #fff;
+    
+    /* Bóng đổ để nổi bật */
+    box-shadow: 0 3px 8px rgba(123, 31, 162, 0.3);
+    
+    /* Hiệu ứng chuyển động mượt mà */
+    transition: transform 0.2s ease-out, opacity 0.2s, box-shadow 0.2s;
+    
+    /* Icon 'X' để đóng tag (Giả lập) */
+    position: relative;
+    padding-right: 25px; /* Thêm không gian cho nút đóng */
+}
+
+/* Hiệu ứng khi hover chip tag */
+.selected-tag:hover {
+    /* Đảo chiều gradient hoặc tăng màu Cyan */
+    background: linear-gradient(45deg, var(--accent-color), var(--primary-color));
+    /* Giảm nhẹ kích thước để tạo cảm giác 'nhấn' */
+    transform: scale(0.98); 
+    box-shadow: 0 1px 5px rgba(0, 188, 212, 0.4); /* Bóng Cyan nhẹ */
+}
+
+/* Thêm ký hiệu 'X' để đóng/xóa tag (Sử dụng CSS Content) */
+.selected-tag::after {
+    content: '×'; /* Ký tự 'X' lớn (Times) */
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-left: 8px;
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Giao diện thanh tìm kiếm (chỉ cho đẹp) */
+#tagSearch {
+    transition: box-shadow 0.3s;
+}
+
+#tagSearch:focus {
+    box-shadow: 0 0 0 3px rgba(123, 31, 162, 0.2); /* Vòng sáng tím khi focus */
+    border-color: var(--primary-color);
+}

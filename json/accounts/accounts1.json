@@ -1,0 +1,41 @@
+[
+  {
+    "id": "BFX532",
+    "name": "Acc Blox Fruits Level Max Có Trái Ác Quỷ Thần Thoại",
+    "account_id": "BF-24A7D",
+    "username": "KingOfTheSea42",
+    "password": "SecurePassword123!",
+    "price": 125000,
+    "currency": "VND",
+    "image": "/anh/50k.jpg",
+    "description": "Tài khoản **Max Level 2550**, sở hữu **Trái Ác Quỷ Dragon (hoặc Leopard)**. Có **Kiếm Cursed Dual Katana (CDK)** và **Súng Soul Guitar**. Tổng **25 triệu Beli** và **150.000 Fragments**.",
+    "link": "/acc/bf001_details.html",
+    "tags": ["Max Level", "Dragon Fruit", "Cursed Dual Katana"]
+  },
+  {
+    "id": "BFE901",
+    "name": "Acc Blox Fruits Level Trung Bình, Trái Ác Quỷ Farm Mạnh",
+    "account_id": "BF-91E3B",
+    "username": "HakiMaster789",
+    "password": "GamerPass@789",
+    "price": 45000,
+    "currency": "VND",
+    "image": "/anh/5k.jpg",
+    "description": "Tài khoản **Level 1500** (Half Max), sở hữu **Trái Ác Quỷ Buddha V2**. Có **Kiếm Rengoku** và **Súng Kabucha**. Tổng **5 triệu Beli** và **50.000 Fragments**. Lý tưởng để farm cấp nhanh.",
+    "link": "/acc/bf002_details.html",
+    "tags": ["Buddha V2", "Farm Level", "Middle Tier"]
+  },
+  {
+    "id": "BFZ147",
+    "name": "Acc Blox Fruits Sơ Khai - Level Thấp, Random Trái Xịn",
+    "account_id": "BF-C6F0A",
+    "username": "NewWorldPirate",
+    "password": "ProSale!Pass456",
+    "price": 15000,
+    "currency": "VND",
+    "image": "/anh/acc 5k 1.1",
+    "description": "Tài khoản **Level 700** (Mới qua Sea 1), phù hợp cho người mới bắt đầu. Có **Random Trái Ác Quỷ Legend/Mythical** (Tỉ lệ cao). Có **Kiếm Katana** cơ bản và **Súng Musket**. Tổng **500.000 Beli**.",
+    "link": "/acc/bf003_details.html",
+    "tags": ["Newbie", "Random Fruit", "Sea 2 Ready"]
+  }
+]

@@ -1,0 +1,470 @@
+/* --- GLOBAL STYLES (Elegant Gaming) --- */
+/* Thiết lập nền sáng, ấm áp và tinh tế */
+body {
+    background-color: #f7f9fc; /* Nền xám rất nhạt, ấm áp */
+    color: #333333; /* Chữ đen mềm mại */
+    font-family: 'Poppins', 'Segoe UI', sans-serif; /* Font hiện đại, sạch sẽ */
+}
+/* Màu chủ đạo (Primary Color) - Tím Đậm / Magenta */
+:root {
+    --primary-color: #7b1fa2; /* Deep Violet / Tím đậm */
+    --accent-color: #00bcd4; /* Cyan / Xanh ngọc làm điểm nhấn */
+    --shadow-color: rgba(0, 0, 0, 0.08);
+    --hover-shadow: rgba(123, 31, 162, 0.3); /* Bóng tím nhẹ khi hover */
+}
+
+/* --- NAVBAR TINH TẾ (Elegant) --- */
+.shop-navbar {
+    background-color: rgba(255, 255, 255, 0.98); /* Trắng tinh khiết, gần như không trong suốt */
+    /* Bóng đổ sâu, nhiều lớp, tinh tế hơn */
+    box-shadow: 0 4px 18px var(--shadow-color); 
+    padding: 0.9rem 2rem; 
+    /* Giảm blur, chỉ giữ cho nền mượt mà */
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+    transition: background-color 0.4s ease;
+    border-bottom: 1px solid #eeeeee; /* Viền mỏng */
+}
+
+/* Thương hiệu */
+.shop-navbar .navbar-brand {
+    color: var(--primary-color); 
+    font-size: 1.7rem; 
+    font-weight: 800;
+    letter-spacing: -1px; 
+    transition: all 0.3s ease;
+}
+
+/* Hover thương hiệu */
+.shop-navbar .navbar-brand:hover {
+    color: var(--accent-color); /* Đổi sang màu Cyan/Xanh ngọc */
+    transform: scale(1.05); 
+}
+
+/* Menu link */
+.shop-navbar .nav-link {
+    color: #555555; 
+    font-weight: 600;
+    transition: color 0.3s, background 0.3s, transform 0.2s;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hiệu ứng gạch chân (Underline) */
+.shop-navbar .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--primary-color);
+    transition: width 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Hover menu link */
+.shop-navbar .nav-link:hover {
+    color: var(--primary-color);
+    background-color: rgba(123, 31, 162, 0.05); /* Nền tím nhạt khi hover */
+    transform: translateY(-1px); /* Nâng nhẹ */
+}
+.shop-navbar .nav-link:hover::after {
+    width: 100%;
+}
+
+/* Link active */
+.shop-navbar .nav-link.active {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+.shop-navbar .nav-link.active::after {
+    width: 100%;
+}
+
+/* --- HEADER SANG TRỌNG (Vibrant Header) --- */
+.shop-header {
+    /* Gradient Tím-Xanh nhẹ nhàng, hiện đại */
+    background: linear-gradient(135deg, #ede7f6, #e0f7fa); 
+    padding: 5rem 1rem; 
+    margin-bottom: 3.5rem;
+    border-radius: 20px; 
+    /* Bóng đổ mềm mại */
+    box-shadow: 0 10px 30px var(--shadow-color);
+    text-align: center;
+}
+
+/* Tiêu đề chính */
+/* Tiêu đề chính - Phiên bản 3D tinh tế */
+.shop-title-subtle {
+    font-size: 3.0rem; 
+    font-weight: 900; 
+    color: #333333; /* Giữ lại nhưng bị ghi đè */
+    margin-bottom: 1.5rem;
+    
+    /* Hiệu ứng Nổi/Chìm tinh tế (ít 3D lại) */
+    text-shadow: 
+        1px 1px 0 rgba(255, 255, 255, 0.1), /* Bóng sáng rất nhẹ, tạo nét nổi */
+        0.5px 0.5px 0 rgba(0, 0, 0, 0.4); /* Bóng tối rất sát, tạo chút chiều sâu */
+    
+    /* Giữ nguyên Gradient */
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+/* Hover tiêu đề (Hiệu ứng nhún nhẹ) */
+.shop-title:hover {
+    transform: translateY(-5px);
+    /* Giữ gradient, không đổi màu chữ */
+}
+
+/* Subtitle */
+.shop-subtitle {
+    font-size: 1.15rem;
+    color: #777777; 
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Nổi bật tên miền */
+.shop-subtitle span {
+    color: var(--primary-color); 
+    font-weight: 700;
+}
+
+/* --- CARD SHOP (Modern Elegant Card) --- */
+.card {
+    border-radius: 12px; 
+    overflow: hidden;
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border: none;
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px var(--shadow-color);
+    cursor: pointer;
+}
+
+/* Hover: nâng card + shadow sâu hơn + viền nhẹ */
+.card:hover {
+    transform: translateY(-8px); 
+    /* Bóng đổ sâu hơn và thêm chút màu tím chủ đạo */
+    box-shadow: 0 15px 30px var(--hover-shadow), 0 0 0 3px var(--primary-color); 
+}
+
+/* Ảnh sản phẩm */
+.card img {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover;
+    transition: transform 0.4s ease-out;
+}
+
+/* Ảnh phóng to nhẹ hơn khi hover card */
+.card:hover img {
+    transform: scale(1.05); 
+}
+
+/* Card body */
+.card-body {
+    padding: 1.25rem;
+    text-align: center;
+}
+
+/* Tiêu đề card */
+.card-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #333333;
+    transition: color 0.3s ease;
+}
+.card:hover .card-title {
+    color: var(--primary-color);
+}
+
+/* Button (Gradient Action Button) */
+.card .btn {
+    border-radius: 8px; 
+    font-weight: 600;
+    padding: 0.8rem 1.8rem;
+    transition: all .3s ease-in-out;
+    /* Gradient Tím-Xanh cho button */
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    color: #fff;
+    border: none;
+    box-shadow: 0 4px 10px rgba(123, 31, 162, 0.3);
+}
+
+/* Hover button (Hiệu ứng "Pop" nổi bật) */
+.card .btn:hover {
+    background: linear-gradient(45deg, var(--accent-color), var(--primary-color)); /* Đổi hướng gradient */
+    transform: scale(1.05) translateY(-2px); 
+    box-shadow: 0 8px 20px rgba(0, 188, 212, 0.4); /* Bóng Cyan mạnh hơn */
+}
+
+/* --- FOOTER SÁNG (Elegant Footer) --- */
+.shop-footer {
+    background-color: #ffffff; 
+    color: #555555; 
+    border-top: 1px solid #e0e0e0; 
+    font-size: 0.9rem;
+    padding-top: 60px; 
+    padding-bottom: 30px; 
+    box-shadow: 0 -5px 15px var(--shadow-color); 
+}
+
+/* Tiêu đề cột */
+.footer-title {
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: var(--primary-color); 
+    margin-bottom: 1.5rem; 
+    /* Gạch chân kép tinh tế */
+    border-bottom: 3px solid var(--primary-color); 
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Danh sách link */
+.footer-list li {
+    margin-bottom: 0.75rem; 
+}
+.footer-list li a {
+    color: #555555; 
+    text-decoration: none;
+    transition: color .3s, padding-left .3s;
+    position: relative;
+    padding-left: 18px; 
+}
+
+/* Icon / Mũi tên trước link */
+.footer-list li a::before {
+    content: '→'; /* Mũi tên hiện đại */
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+    transition: transform 0.3s ease;
+    font-weight: 600;
+}
+
+.footer-list li a:hover {
+    color: var(--accent-color); /* Link đổi sang Cyan/Xanh ngọc khi hover */
+    padding-left: 22px; 
+}
+.footer-list li a:hover::before {
+    transform: translateX(4px); 
+}
+
+/* Liên hệ & bản quyền */
+.footer-contact p {
+    color: #777; 
+}
+.shop-footer a {
+    color: var(--primary-color); 
+    font-weight: 700;
+}
+
+/* --- TIÊU ĐỀ SECTION (Clean & Emphasized) --- */
+.section-title {
+    font-size: 2.5rem; 
+    font-weight: 800; 
+    text-align: center;
+    margin-top: 2.5rem;
+    margin-bottom: 4rem; 
+    position: relative;
+    display: block; 
+    
+    color: #333333; 
+    letter-spacing: 0.5px; 
+    
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.05); 
+    
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Hiệu ứng gạch ngang/chip dưới tiêu đề */
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+/* HIỆU ỨNG HOVER TINH TẾ */
+.section-title:hover {
+    color: var(--primary-color); 
+    transform: translateY(-4px); 
+    
+    /* Thêm shadow nhẹ khi hover để chữ 'nổi' khỏi nền */
+    text-shadow: 0 5px 10px var(--hover-shadow); 
+}
+/* ====================================================================== */
+/* === Phần trong acc === */
+/* ====================================================================== */
+.card .card-text.fw-bold.text-danger.fs-4 {
+    /* Màu Đen Sâu hơn (Giữ nguyên cho độ tương phản) */
+    color: #333333 !important; 
+    
+    font-size: 1.5rem !important; 
+    font-weight: 800 !important; 
+    letter-spacing: -0.7px; 
+    
+    text-shadow: none; 
+    
+    margin-top: auto; 
+    margin-bottom: 1rem !important;
+    
+    transition: color 0.35s cubic-bezier(0.2, 0.8, 0.4, 1), 
+                transform 0.35s cubic-bezier(0.2, 0.8, 0.4, 1);
+}
+
+/* Hiệu ứng giá khi Card được hover */
+.card:hover .card-text.fw-bold.text-danger.fs-4 {
+    /* Màu thương hiệu khi hover: Tím chủ đạo */
+    color: var(--primary-color) !important; 
+    transform: translateY(-3px) scale(1.02);
+}
+
+/* ====================================================================== */
+/* === 1.acc. Badge ID Góc (Elevated & Clean) === */
+/* ====================================================================== */
+.card .account-id-badge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    /* Màu nền Badge: Màu Tím chủ đạo */
+    background-color: var(--primary-color); 
+    color: #fff;
+    
+    font-size: 0.85rem; 
+    font-weight: 700;
+    
+    padding: 7px 18px; 
+    border-top-left-radius: 12px; 
+    border-bottom-right-radius: 16px; 
+    
+    z-index: 15; 
+    /* Bóng đổ cho Badge: Giữ màu đen tối để tạo sự tách biệt rõ rệt với Card */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); 
+    transition: transform 0.5s cubic-bezier(0.3, 1.8, 0.6, 1.2); 
+}
+/* Hiệu ứng nổi và dịch chuyển nhẹ khi hover Card */
+.card:hover .account-id-badge {
+    transform: translate(-5px, -5px); 
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* ====================================================================== */
+/* === 2.acc. Filter Panel (Khung chính) === */
+/* ====================================================================== */
+.filter-panel {
+    background-color: #ffffff !important; /* Nền Panel: Trắng tinh khiết */
+    border: 1px solid #e0e6ec;
+    border-radius: 18px; 
+    padding: 25px 30px !important; 
+    
+    /* Bóng đổ nhẹ nhàng, sử dụng biến shadow tím */
+    box-shadow: 0 10px 30px var(--shadow-color), 
+                0 0 0 1px rgba(0, 0, 0, 0.02); 
+}
+
+/* ====================================================================== */
+/* === 2.1.acc. Form Control (Input Khắc Chìm - Embossed/Inner Shadow) === */
+/* ====================================================================== */
+.filter-panel .form-control,
+.filter-panel .input-group-text {
+    background-color: #ffffff;
+    border: none; 
+    border-radius: 10px; 
+    
+    /* Hiệu ứng VIP Pro: Bóng đổ bên trong (Inner Shadow) */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1), 
+                inset 0 0 0 1px rgba(255, 255, 255, 0.5); 
+    
+    transition: all 0.3s ease;
+}
+
+/* Tinh chỉnh input group text cho đồng bộ */
+.filter-panel .input-group-text {
+    background-color: #f0f3f5; /* Màu nền hơi khác để phân biệt */
+    font-weight: 500;
+}
+
+/* Hiệu ứng Focus (Khi nhập liệu): Bóng đổ bên trong biến mất, thay bằng viền nổi bật */
+.filter-panel .form-control:focus {
+    /* Vòng sáng màu tím chủ đạo */
+    box-shadow: 0 0 0 3px rgba(123, 31, 162, 0.3); 
+    background-color: #ffffff;
+    outline: none;
+}
+
+/* ====================================================================== */
+/* === 3.acc. Nút Hành Động (3D Gradient Buttons) === */
+/* ====================================================================== */
+
+/* Nút Áp dụng Lọc (VIP Primary) */
+.btn-filter-vip {
+    border: none !important;
+    border-radius: 10px !important;
+    font-weight: 700;
+    
+    /* Màu nền Gradient 3D: Tím-Xanh Ngọc */
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%) !important;
+    box-shadow: 0 4px 15px var(--hover-shadow); /* Bóng đổ tím nổi bật */
+    transition: all 0.3s ease;
+}
+
+.btn-filter-vip:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px var(--hover-shadow); /* Bóng tím mạnh hơn */
+    filter: brightness(1.1);
+}
+
+/* Nút Đặt lại (Siêu cấp Secondary) */
+.btn-filter-reset {
+    /* Giữ nguyên màu xám trung tính để tạo sự đối lập */
+    background-color: #fff !important;
+    color: #6c757d !important;
+    border: 1px solid #ced4da !important;
+    border-radius: 10px !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+/* ====================================================================== */
+/* === EROR MESSAGE (Themed) === */
+/* ====================================================================== */
+.no-results-message {
+    display: block; 
+    width: 100%;
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+    padding: 18px 25px;
+    
+    /* Màu sắc và Nền: Chuyển sang tông Tím/Hồng nhẹ */
+    background-color: var(--error-bg-color); 
+    /* Dùng Gradient nhẹ */
+    background-image: linear-gradient(135deg, #ffffff 0%, var(--error-bg-color) 100%); 
+    
+    color: var(--error-text-color); /* Màu chữ tím đậm */
+    
+    /* Hình dáng và Bóng đổ (Mềm mại) */
+    border: 1px solid rgba(123, 31, 162, 0.2); /* Viền tím nhạt */
+    border-radius: 14px; 
+    font-size: 1.35rem !important; 
+    font-weight: 600; 
+    text-align: center;
+    
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); 
+    
+    text-shadow: none; 
+}
